@@ -10,7 +10,6 @@ function compileSass() {
         .pipe(dest('dist/css'))
         .pipe(cleanCSS())
         .pipe(rename({
-            basename: 'index',
             suffix: '.min'
           }))
         .pipe(dest('dist/css'));

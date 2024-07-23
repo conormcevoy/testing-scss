@@ -15,6 +15,7 @@
     "copy-assets": "xcopy /s /e /i /q assets dist\\assets",
     "clean": "rimraf dist dist-storybook*",
     "sass-mini": "sass scss/index.scss dist/css/design-system.css --style compressed",
+    "sass-mini-components": "sass scss/**/*.scss:dist/css --style compressed",
     "sass": "sass scss/index.scss:dist/css/design-system-verbose.css"
   },
   "author": "",

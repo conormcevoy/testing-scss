@@ -1,5 +1,9 @@
 @use 'sass:math';
 
+@import '../variables/variables';
+@import '../mixins/defaults';
+@import '../mixins/triangle';
+
 $dropdown-background: $ul-white;
 $dropdown-border-color: $border-primary;
 $dropdown-margin: math.div($spacing-sm, 2);

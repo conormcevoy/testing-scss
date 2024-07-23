@@ -9,7 +9,7 @@
 
 // variables & functions
 @import "functions/px-to-rem";
-@import "variables";
+@import "variables/variables";
 @import "variables/uls";
 @import "variables/ultrus";
 
@@ -27,10 +27,7 @@
 
 @import "layouts/grid";
 @import "layouts/triangle";
-
-// other
-
-@import "visibility";
+@import "layouts/visibility";
 
 
 // colors

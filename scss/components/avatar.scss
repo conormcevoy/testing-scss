@@ -1,6 +1,8 @@
 @use 'sass:math';
 @use "sass:map";
 
+@import '../variables/variables';
+
 $avatar-user-background-color: $secondary-hover;
 $avatar-user-color: $ul-black;
 $avatar-user-hover-background-color: $ul-black;
