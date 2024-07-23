@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Material Symbols Filled';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/MaterialSymbolsFilled/woff2/Material_Symbols_Filled-400.woff2') format('woff2'), url('../assets/fonts/MaterialSymbolsFilled/ttf/Material_Symbols_Filled-400.ttf') format('truetype');
+}
+
+.material-symbols.filled {
+  direction: ltr;
+  display: inline-block;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: 'Material Symbols Filled';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+}

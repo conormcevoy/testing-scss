@@ -1,0 +1,11 @@
+@mixin defaults {
+    &{box-sizing: border-box;
+    line-height: $line-height;}
+  
+    *,
+    *::after,
+    *::before {
+      box-sizing: inherit;
+    }
+  }
+  

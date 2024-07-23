@@ -1,0 +1,139 @@
+$noglobal: true !default;
+$prefix: "ul-" !default;
+$body-font-family: "Open Sans", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$line-height: 1.4;
+
+/*******************************************************************************
+                                  Colours
+ ******************************************************************************/
+
+/* Background colours */
+$background-body: #fafaf9 !default;
+$background-contrast: #595958 !default;
+$background-placeholder: #f2f0f0 !default;
+$background-surface: #ebebea !default;
+
+/* Border colours */
+$border-contrast: #59595a !default;
+$border-primary: #d3d3d3 !default;
+
+/* Semantics colours */
+$success: #146615 !default;
+$success-hover: #0d470e !default;
+$success-light: #eaf0e9 !default;
+$success-pressed: #093308 !default;
+
+$warning: #ffa700 !default;
+$warning-hover: #eb9a25 !default;
+$warning-light: #fff4d6 !default;
+$warning-pressed: #d18820 !default;
+
+$danger: #e12d33 !default;
+$danger-hover: #c01b21 !default;
+$danger-light: #fdf0f2 !default;
+$danger-pressed: #931519 !default;
+
+$info: #096072 !default;
+$info-hover: #054e5d !default;
+$info-light: #e7f4f7 !default;
+$info-pressed: #033d48 !default;
+
+/* Data series colours */
+$series-completed: #88929c !default;
+$series-critical: #ec001b !default;
+$series-done: #0d7c8a !default;
+$series-high: #fe7f21 !default;
+$series-progress: #ffbe2c !default;
+$series-total: #c2c2c7 !default;
+
+/* Grey shades */
+$gray-2: #fafafa !default;
+$gray-4: #f5f5f5 !default;
+$gray-8: #ebebeb !default;
+$gray-10: #e6e6e6 !default;
+$gray-20: #cccccc !default;
+$gray-30: #b3b3b3 !default;
+$gray-40: #999999 !default;
+$gray-70: #4d4d4d !default;
+$gray-90: #1a1a1a !default;
+
+/* Control colours */
+$primary: #01518a !default;
+$primary-disabled: rgba(1, 81, 138, 0.5) !default;
+$primary-hover: #003357 !default;
+$primary-light: #ecf5fc !default;
+$primary-pressed: #001524 !default;
+$primary-pressed: #001524 !default;
+
+$secondary: #e6e6e6 !default;
+$secondary-disabled: rgba(230, 230, 230, 0.5) !default;
+$secondary-hover: #cccccc !default;
+$secondary-pressed: #999999 !default;
+
+$tertiary: #fffffe !default;
+$tertiary-disabled: rgba(255, 255, 255, 0.5) !default;
+$tertiary-hover: #000003 !default;
+$tertiary-pressed: #cccccd !default;
+
+/* Text colours */
+$text-focus: #000001 !default;
+$text-hover-focus: #0a99ff !default;
+$text-link: #01518a !default;
+$text-primary: #3e3e3e !default;
+
+/* UL brand colours */
+$ul-black: #000000 !default;
+$ul-red: #CA0123 !default;
+$ul-red-disabled: #DBA1AA !default;
+$ul-red-hover: #9B011B !default;
+$ul-red-light: #F7D9DE !default;
+$ul-red-pressed: #6E0113 !default;
+$ul-white: #ffffff !default;
+
+// Temporary patch until colors are published on https://designsystem.ul.com
+$ul-red-hover: #9B011B !default;
+$ul-red-light: #F7D9DE !default;
+$ul-red-disabled: #DBA1AA !default;
+$ul-red-pressed: #6E0113 !default;
+$ul-red: #CA0123 !default;
+
+
+/*******************************************************************************
+                                     Borders
+ ******************************************************************************/
+
+ $border-radius: 3px;
+ $border-width: pxtorem(1);
+
+ 
+/*******************************************************************************
+                                    Spacing
+ ******************************************************************************/
+
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+$form-border-size: $border-width;
+$form-horizontal-padding: $spacing-md * 0.75;
+$form-vertical-padding: $spacing-md * 0.75;
+
+/*******************************************************************************
+                                  Breakpoints
+ ******************************************************************************/
+
+ $breakpoints: (
+    sm: 575px, // 30rem, phone
+    md: 768px, // 48rem, tablet
+    lg: 989px, // 62rem, desktop
+    xl: 1200px // 75rem, widescreen
+  );
+  
+  $breakpoint-dictionary: (
+    sm: 'mobile',
+    md: 'tablet',
+    lg: 'desktop',
+    xl: 'widescreen',
+  );
+  

@@ -1,0 +1,102 @@
+@use 'sass:math';
+
+$tooltip-background-color: $ul-black;
+$tooltip-color: $ul-white;
+$tooltip-contrast-background-color: $ul-white;
+$tooltip-contrast-color: $ul-black;
+$tooltip-font-size: 0.875rem;
+$tooltip-triangle-size: 7px;
+$tooltip-distance: $spacing-sm;
+
+@mixin tooltip-triangle($color) {
+  &.-top {
+    &::after {
+      border-top-color: $color;
+    }
+  }
+
+  &.-bottom {
+    &::after {
+      border-bottom-color: $color;
+    }
+  }
+
+  &.-left {
+    &::after {
+      border-left-color: $color;
+    }
+  }
+
+  &.-right {
+    &::after {
+      border-right-color: $color;
+    }
+  }
+}
+
+span.#{$prefix}has-tooltip {
+  border-bottom: 2px dotted $primary;
+  cursor: help;
+  display: inline-block;
+}
+
+.#{$prefix}tooltip {
+  background-color: $tooltip-background-color;
+  border-radius: $border-radius;
+  color: $tooltip-color;
+  display: inline-block;
+  font-family: $body-font-family;
+  font-size: $tooltip-font-size;
+  font-weight: 600;
+  max-width: 12rem;
+  padding: math.div($spacing-sm, 2) $spacing-sm;
+  position: relative;
+  text-align: center;
+
+  @include tooltip-triangle($ul-black);
+  @include defaults;
+
+  &::after {
+    border: $tooltip-triangle-size solid transparent;
+    content: '';
+    display: block;
+    position: absolute;
+
+    @include defaults;
+  }
+
+  &.-top {
+    &::after {
+      bottom: -0.85rem;
+      left: calc(50% - #{$tooltip-triangle-size});
+    }
+  }
+
+  &.-bottom {
+    &::after {
+      left: calc(50% - #{$tooltip-triangle-size});
+      top: -0.85rem;
+    }
+  }
+
+  &.-left {
+    &::after {
+      right: -0.85rem;
+      top: calc(50% - #{$tooltip-triangle-size});
+    }
+  }
+
+  &.-right {
+    &::after {
+      left: -0.85rem;
+      top: calc(50% - #{$tooltip-triangle-size});
+    }
+  }
+
+  &.-contrast {
+    background-color: $ul-white;
+    color: $ul-black;
+
+    @include tooltip-triangle($ul-white);
+  }
+}

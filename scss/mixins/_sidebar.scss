@@ -1,0 +1,14 @@
+$sidebar-overlay-shadow-color: rgba($ul-black, 0.15);
+$sidebar-overlay-shadow: 0.2rem 0 0.2rem $sidebar-overlay-shadow-color;
+
+@mixin sidebar-overlay {
+  bottom: 0;
+  box-shadow: $sidebar-overlay-shadow;
+  height: auto;
+  left: 0;
+  max-width: 90%;
+  position: fixed;
+  top: 0;
+  width: 15rem;
+  z-index: 3;
+}

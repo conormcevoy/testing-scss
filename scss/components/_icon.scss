@@ -1,0 +1,15 @@
+$icon-themes: (
+  danger: $danger,
+  warning: $warning,
+  success: $success,
+  info: $info,
+  inactive: $secondary-hover,
+);
+
+.#{$prefix}icon {
+  @each $key, $value in $icon-themes {
+    &.-#{$key} {
+      color: $value;
+    }
+  }
+}

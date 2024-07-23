@@ -1,0 +1,89 @@
+$grid-gutter: $spacing-sm;
+
+// .container is main centered wrapper with a max width of 75.0rem (1200px)
+.#{$prefix}grid__container {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+
+  @include defaults;
+}
+
+// Using flexbox for the grid, inspired by Philip Walton:
+// http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+// By default each .column within a .row will evenly take up
+// available width, and the height of each .column with take
+// up the height of the tallest .column in the same .row
+.#{$prefix}grid__row {
+  display: flex;
+  margin-left: -$grid-gutter;
+  padding: 0;
+  width: calc(100% + #{$grid-gutter * 2});
+
+  @include defaults;
+
+  &.-no-padding {
+    padding: 0;
+
+    & > .#{$prefix}column {
+      padding: 0;
+    }
+  }
+
+  &.-wrap {
+    flex-wrap: wrap;
+  }
+
+  // Vertically Align Columns
+  // .row-* vertically aligns every .col in the .row
+  &.-top {
+    align-items: flex-start;
+  }
+
+  &.-bottom {
+    align-items: flex-end;
+  }
+
+  &.-center {
+    align-items: center;
+  }
+
+  &.-stretch {
+    align-items: stretch;
+  }
+
+  &.-baseline {
+    align-items: baseline;
+  }
+}
+
+.#{$prefix}grid__column {
+  display: block;
+  // IE 11 required specifying the flex-basis otherwise it breaks mobile
+  flex: 1 1 auto;
+  margin-left: 0;
+  max-width: 100%;
+  padding: 0 $grid-gutter;
+  width: 100%;
+
+  @include defaults;
+  @include grid-at-breakpoint();
+  @include grid-at-breakpoint("xl");
+  @include grid-at-breakpoint("lg");
+  @include grid-at-breakpoint("md");
+  @include grid-at-breakpoint("sm");
+
+  .-top {
+    align-self: flex-start;
+  }
+
+  .-bottom {
+    align-self: flex-end;
+  }
+
+  .-center {
+    align-self: center;
+  }
+}

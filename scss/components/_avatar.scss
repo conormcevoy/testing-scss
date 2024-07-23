@@ -1,0 +1,146 @@
+@use 'sass:math';
+@use "sass:map";
+
+$avatar-user-background-color: $secondary-hover;
+$avatar-user-color: $ul-black;
+$avatar-user-hover-background-color: $ul-black;
+$avatar-user-hover-color: $ul-white;
+$avatar-user-border-color: $ul-white;
+$avatar-user-plus-background-color: $secondary;
+$avatar-user-call-to-upload-color: $ul-black;
+$avatar-user-call-to-upload-border-color: $avatar-user-call-to-upload-color;
+$avatar-badge-border-color: $ul-white;
+$avatar-badge-size: $spacing-md;
+$avatar-entity-background-color: $background-contrast;
+$avatar-entity-color: $ul-white;
+$avatar-list-spacing: $spacing-sm;
+$avatar-sizes: (
+  tiny: 1.5rem,
+  small: 2rem,
+  medium: 2.5rem,
+  large: 3.5rem,
+  huge: 4.5rem
+);
+$default-avatar-size: map-get($avatar-sizes, "medium");
+$avatar-padding: 0.125;
+$avatar-width: 1 - (2 * $avatar-padding);
+
+.#{$prefix}avatar {
+  align-items: center;
+  background-color: $avatar-user-background-color;
+  border-radius: 10rem; // Big enough to be round without issue.
+  box-sizing: content-box;
+  color: $avatar-user-color;
+  cursor: default;
+  display: flex;
+  height: $default-avatar-size;
+  justify-content: center;
+  min-width: $default-avatar-size * $avatar-width;
+  padding: 0 ($default-avatar-size * $avatar-padding);
+  position: relative;
+  width: min-content;
+
+  @each $name, $size in $avatar-sizes {
+    &.-#{$name} {
+      // min-width and two lots of horizontal padding add up to $size.
+      // This ensures the rounded ends don't crowd the initials
+      font-size: ($size * 0.4);
+      height: $size;
+      min-width: ($size * $avatar-width);
+      padding: 0 ($size * $avatar-padding);
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    display: block;
+    // image is oversized so it expands over the padding of the containing element.
+    // NB: avatar-width is the fraction of the avatar width that isn't padding.
+    width: math.div(100%, $avatar-width);
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  &.-entity {
+    background-color: $avatar-entity-background-color;
+    border-radius: 0;
+    color: $avatar-entity-color;
+  }
+
+  &.-plus {
+    background-color: $avatar-user-plus-background-color;
+    font-weight: normal;
+  }
+
+  &.-red {
+    background: $ul-red;
+    color: $ul-white;
+  }
+
+  &:hover {
+    background-color: $avatar-user-hover-background-color;
+    color: $avatar-user-hover-color;
+  }
+
+  &.-call-to-upload {
+    background-color: transparent;
+    border: 0.18rem dashed $avatar-user-call-to-upload-border-color;
+    color: $avatar-user-call-to-upload-color;
+  }
+}
+
+.#{$prefix}avatar__list {
+  display: flex;
+
+  .#{$prefix}avatar {
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        z-index: #{100 - $i};
+      }
+    }
+
+    &:not(:first-child) {
+      margin-left: -$avatar-list-spacing;
+      position: relative;
+    }
+
+    &.-plus {
+      margin-left: 0;
+    }
+
+    &:hover {
+      z-index: 100;
+    }
+  }
+}
+
+.#{$prefix}avatar__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 15rem;
+
+  .#{$prefix}avatar {
+    margin-bottom: $avatar-list-spacing;
+    margin-right: $avatar-list-spacing;
+  }
+}
+
+.#{$prefix}avatar__grid,
+.#{$prefix}avatar__list {
+  box-shadow: 0 0 0 0.18rem $avatar-user-border-color;
+}
+
+.#{$prefix}avatar__badge {
+  background: $background-contrast;
+  border: 0.18rem solid $avatar-badge-border-color;
+  border-radius: 1rem;
+  bottom: -0.125rem;
+  height: $avatar-badge-size;
+  position: absolute;
+  right: -0.125rem;
+  text-indent: -9999px;
+  width: $avatar-badge-size;
+}

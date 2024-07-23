@@ -1,0 +1,94 @@
+$triangle-size: $spacing-md * 0.75;
+$triangle-size-small: $spacing-sm;
+$triangle-shadow: $secondary-hover;
+
+.#{$prefix}triangle {
+  background: transparent;
+  border: $triangle-size solid transparent;
+  border-top-color: $ul-white;
+  filter: drop-shadow(0 pxtorem(1) 0 $triangle-shadow);
+  height: 0;
+  position: absolute;
+  transform: scaleY(0.75) translateY(-0.25rem);
+  width: 0;
+
+  &.-dark {
+    border-top-color: $ul-black;
+  }
+
+  &.-small {
+    border-width: $triangle-size-small;
+  }
+
+  &.-n {
+    left: 50%;
+    top: 100%;
+    transform: scaleY(0.75) translateY(-0.25rem) translateX(-50%);
+  }
+
+  &.-s {
+    bottom: 100%;
+    left: 50%;
+    transform: scaleY(0.75) translateY(0.25rem) rotate(180deg) translateX(50%);
+  }
+
+  &.-e {
+    right: calc(100% - 0.19rem);
+    top: 50%;
+    transform: scaleX(0.75) translateY(0) rotate(90deg) translateX(-50%);
+  }
+
+  &.-w {
+    left: calc(100% - 0.19rem);
+    top: 50%;
+    transform: scaleX(0.75) translateY(0) rotate(-90deg) translateX(50%);
+  }
+
+  &.-nnw {
+    right: 0;
+    top: 100%;
+    transform: scaleY(0.75) translateY(-0.25rem) translateX(-50%);
+  }
+
+  &.-nne {
+    left: 1.5rem;
+    top: 100%;
+    transform: scaleY(0.75) translateY(-0.25rem) translateX(-50%);
+  }
+
+  &.-sse {
+    bottom: 100%;
+    left: 1.5rem;
+    transform: scaleY(0.75) translateY(0.25rem) rotate(180deg) translateX(50%);
+  }
+
+  &.-ssw {
+    bottom: 100%;
+    right: 0;
+    transform: scaleY(0.75) translateY(0.25rem) rotate(180deg) translateX(50%);
+  }
+
+  &.-ene {
+    bottom: 0;
+    right: calc(100% - 0.19rem);
+    transform: scaleX(0.75) translateY(0) rotate(90deg) translateX(-50%);
+  }
+
+  &.-wnw {
+    bottom: 0;
+    left: calc(100% - 0.19rem);
+    transform: scaleX(0.75) translateY(0) rotate(-90deg) translateX(50%);
+  }
+
+  &.-ese {
+    right: calc(100% - 0.19rem);
+    top: 1.5rem;
+    transform: scaleX(0.75) translateY(0) rotate(90deg) translateX(-50%);
+  }
+
+  &.-wsw {
+    left: calc(100% - 0.19rem);
+    top: 1.5rem;
+    transform: scaleX(0.75) translateY(0) rotate(-90deg) translateX(50%);
+  }
+}

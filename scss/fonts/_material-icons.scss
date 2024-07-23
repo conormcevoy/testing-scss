@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/MaterialIcons/woff2/Material_Icons-400-fallback.woff2') format('woff2'), url('../assets/fonts/MaterialIcons/ttf/Material_Icons-400.ttf') format('truetype');
+}
+
+.material-icons {
+  direction: ltr;
+  display: inline-block;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: 'Material Icons';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+}

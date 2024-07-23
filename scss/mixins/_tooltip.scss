@@ -1,0 +1,31 @@
+@mixin tooltip-position($offset: 2rem) {
+    position: relative;
+  
+    .#{$prefix}tooltip {
+      position: absolute;
+    }
+  
+    .-top {
+      bottom: $offset;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .-bottom {
+      left: 50%;
+      top: $offset;
+      transform: translateX(-50%);
+    }
+  
+    .-left {
+      right: $offset;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .-right {
+      left: $offset;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }

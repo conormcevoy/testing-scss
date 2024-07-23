@@ -1,0 +1,23 @@
+.#{$prefix}visibility {
+    &.-off {
+      display: none;
+    }
+  
+    &.-on {
+      display: unset;
+    }
+  
+    @each $key, $device in $breakpoint-dictionary {
+      &.-off-#{$device} {
+        @include breakpoint($key) {
+          display: none;
+        }
+      }
+  
+      &.-on-#{$device} {
+        @include breakpoint($key) {
+          display: unset;
+        }
+      }
+    }
+  }

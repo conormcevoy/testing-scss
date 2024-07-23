@@ -1,0 +1,119 @@
+@use 'sass:math';
+
+$dropdown-background: $ul-white;
+$dropdown-border-color: $border-primary;
+$dropdown-margin: math.div($spacing-sm, 2);
+$dropdown-padding: $dropdown-margin 0;
+$dropdown-shadow-color: rgba($ul-black, 0.15);
+$dropdown-width: 20rem;
+$dropdown-header-margin: $spacing-sm $spacing-md $spacing-md;
+$dropdown-item-padding: $spacing-sm * 1.35 $spacing-md;
+$dropdown-item-padding-small: $spacing-sm * 0.9 $spacing-md;
+$dropdown-item-color: $text-primary;
+$dropdown-item-hover-color: $ul-black;
+$dropdown-item-hover-bg: $secondary;
+
+.#{$prefix}dropdown {
+  background: $dropdown-background;
+  border: pxtorem(1) solid $dropdown-border-color;
+  box-shadow: 0 pxtorem(2) pxtorem(3) $dropdown-shadow-color;
+  padding: $dropdown-padding;
+  width: $dropdown-width;
+
+  @include defaults;
+  @include triangle($spacing-sm, $ul-white, 0, $dropdown-shadow-color);
+
+  a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+  }
+
+  &.-fluid {
+    width: auto;
+  }
+
+  &.-small {
+    .#{$prefix}dropdown__item {
+      padding: $dropdown-item-padding-small;
+    }
+  }
+}
+
+.#{$prefix}dropdown__item {
+  color: $dropdown-item-color;
+  padding: $dropdown-item-padding;
+
+  &:hover {
+    background-color: $dropdown-item-hover-bg;
+    color: $dropdown-item-hover-color;
+
+    .#{$prefix}icon {
+      color: $dropdown-item-hover-color;
+    }
+  }
+
+  &.-has-input {
+    align-items: center;
+    display: flex;
+  }
+
+  .#{$prefix}icon {
+    color: $background-contrast;
+    margin-right: $spacing-md;
+    margin-top: -0.4rem;
+    transform: translateY(0.3rem);
+  }
+
+  [type='radio'],
+  [type='checkbox'] {
+    + label::before {
+      margin-right: $spacing-md;
+    }
+  }
+}
+
+.#{$prefix}dropdown__separator {
+  background-color: $dropdown-border-color;
+  border: 0;
+  height: pxtorem(1);
+  margin: $dropdown-margin 0;
+}
+
+.#{$prefix}dropdown__header {
+  border-bottom: pxtorem(1) solid $dropdown-border-color;
+  margin-bottom: $dropdown-margin;
+  padding: $dropdown-header-margin;
+
+  &.-nested {
+    font-size: 0.875rem;
+    margin-bottom: $spacing-sm;
+
+    span {
+      position: relative;
+      top: 0.1rem;
+    }
+  }
+}
+
+.#{$prefix}dropdown__headerIcon {
+  margin-right: 0.2rem;
+  margin-top: -2rem;
+  transform: translate(-0.2rem, 0.55rem);
+}
+
+.#{$prefix}dropdown__headerTitle {
+  font-size: 1.1rem;
+  margin-bottom: $spacing-sm;
+  margin-top: 0;
+}
+
+.#{$prefix}dropdown__headerMeta {
+  p {
+    margin: 0;
+  }
+
+  .#{$prefix}avatar {
+    float: right;
+  }
+}
