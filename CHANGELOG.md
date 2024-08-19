@@ -4,6 +4,27 @@
 
 - **config**: 125 somehting happened (#14)
 
+## [1.3.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.2.6...ul-ds-v1.3.0) (2024-08-19)
+
+
+### Features
+
+* **config:** 1 here is new changes ([#16](https://github.com/conormcevoy/testing-scss/issues/16)) ([e0cb4ab](https://github.com/conormcevoy/testing-scss/commit/e0cb4abdf65786dbefabb97912f04aa4d5354164))
+* **setup:** 123 changed manifest ([4c7963f](https://github.com/conormcevoy/testing-scss/commit/4c7963f82580161674e83d97f6fcdbc637cc7493))
+
+
+### Bug Fixes
+
+* **config:** 1 1 ([#33](https://github.com/conormcevoy/testing-scss/issues/33)) ([47ddf23](https://github.com/conormcevoy/testing-scss/commit/47ddf23039b91557177f327c07bbcd626fbcf123))
+* **config:** 1 added configuration into package.json ([#29](https://github.com/conormcevoy/testing-scss/issues/29)) ([1eefe81](https://github.com/conormcevoy/testing-scss/commit/1eefe81de7040dcd3fdfc247d1e6e9e8c91c2418))
+* **config:** 123 added rrepo secret into pipeline ([#27](https://github.com/conormcevoy/testing-scss/issues/27)) ([f9d295c](https://github.com/conormcevoy/testing-scss/commit/f9d295ce99653eba9d143889f7fe57b15d478079))
+* **config:** 125 somehting happened ([#14](https://github.com/conormcevoy/testing-scss/issues/14)) ([6ed99d9](https://github.com/conormcevoy/testing-scss/commit/6ed99d934e919f5b2769cfd78e4fbd6e9df6cd0e))
+* **config:** 2 ([#18](https://github.com/conormcevoy/testing-scss/issues/18)) ([5166763](https://github.com/conormcevoy/testing-scss/commit/51667635dc2f75fdfead8a4ae7aa177b488d4cd8))
+* **config:** 2 bla bla bla ([#31](https://github.com/conormcevoy/testing-scss/issues/31)) ([96704fd](https://github.com/conormcevoy/testing-scss/commit/96704fd43039059f28ae5424095667dccf71c1c6))
+* **config:** 2 boom ([#23](https://github.com/conormcevoy/testing-scss/issues/23)) ([abf8498](https://github.com/conormcevoy/testing-scss/commit/abf84987438cfeaf429a7fa1c0c8a3f5ac3a41de))
+* **config:** 3 some garbage fix ([#20](https://github.com/conormcevoy/testing-scss/issues/20)) ([f9d2c93](https://github.com/conormcevoy/testing-scss/commit/f9d2c93aeb4c27584d90a0257daa9584aa5481aa))
+* **config:** 323232 something added ([#25](https://github.com/conormcevoy/testing-scss/issues/25)) ([9060f06](https://github.com/conormcevoy/testing-scss/commit/9060f0689c96d3170b65d3da8364ed2a6a9a0fb0))
+
 ## [1.2.6](https://github.com/ArnisLupiks/testing-scss/compare/ul-ds-v1.2.5...ul-ds-v1.2.6) (2024-08-02)
 
 
