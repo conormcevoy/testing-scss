@@ -4,6 +4,13 @@
 
 - **config**: 125 somehting happened (#14)
 
+## [1.5.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.4.0...ul-ds-v1.5.0) (2024-08-19)
+
+
+### Features
+
+* **config:** 1234 fixed registry url ([8ff234a](https://github.com/conormcevoy/testing-scss/commit/8ff234ad9d5846affdf7a7cada73330f9022678a))
+
 ## [1.4.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.3.0...ul-ds-v1.4.0) (2024-08-19)
 
 
