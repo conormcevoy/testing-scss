@@ -1,12 +1,3 @@
-# This script requires a Personal access token to be created. The token
-# should be added as a repository secret called "RELEASE_PLEASE" under
-# https://github.com/OWNER/REPO/settings/secrets/actions
-#
-# NB: Fine grained PATs do NOT work, only classic PATs work at this time
-# The permissions required are:
-# repo
-# write-packages (for writing to the github registry)
-
 name: Release Please
 
 on:
@@ -15,45 +6,39 @@ on:
       - main
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          ref: main
+          node-version: '14'
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-          registry-url: 'https://npm.pkg.github.com'
-          always-auth: true
+      - name: Install dependencies
+        run: npm install
 
-      - name: Install npm packages
-        run: yarn --frozen-lockfile
-
-      - name: Build package
+      - name: Build
         run: yarn build-dev
 
       - name: Release Please
         uses: googleapis/release-please-action@v4
         id: release
         with:
-          token: ${{secrets.REPO_TOKEN}}
+          token: ${{ secrets.REPO_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-          # The logic below handles the npm publication:
-          uses: actions/checkout@v4
-          # these if statements ensure that a publication only occurs when
-          # a new release is created:
-          if: ${{ steps.release.outputs.release_created }}
-          run: yarn publish --access public
-          env:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to Github NPM registry
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish documentation
-        if: ${{ steps.release.outputs.release_created }} 
+        if: ${{ steps.release.outputs.release_created == 'true' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
