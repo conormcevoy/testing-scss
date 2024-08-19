@@ -4,6 +4,14 @@
 
 - **config**: 125 somehting happened (#14)
 
+## [1.4.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.3.0...ul-ds-v1.4.0) (2024-08-19)
+
+
+### Features
+
+* **config:** 2243 updated release pipeeline ([5c748ba](https://github.com/conormcevoy/testing-scss/commit/5c748bacf61470fd6f6a6d2f85ef718c94ee7f1d))
+* **config:** fix pipeline node version ([462d77d](https://github.com/conormcevoy/testing-scss/commit/462d77dc9e515c7d5ce01132731ef111976f94e0))
+
 ## [1.3.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.2.6...ul-ds-v1.3.0) (2024-08-19)
 
 
