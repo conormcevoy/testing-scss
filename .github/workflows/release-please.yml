@@ -35,7 +35,7 @@ jobs:
 
       - name: Publish to Github NPM registry
         if: ${{ steps.release.outputs.release_created == 'true' }}
-        run: yarn publish --access public
+        run: yarn publish --access public dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
