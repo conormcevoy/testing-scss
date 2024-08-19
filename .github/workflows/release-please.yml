@@ -43,33 +43,14 @@ jobs:
           token: ${{secrets.REPO_TOKEN}}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-          with:
-            # The logic below handles the npm publication:
-            - uses: actions/checkout@v4
-              # these if statements ensure that a publication only occurs when
-              # a new release is created:
-              if: ${{ steps.release.outputs.release_created }}
-            - uses: actions/setup-node@v4
-              if: ${{ steps.release.outputs.release_created }} == 'true'
-              run: yarn publish --access public
-              env:
-                NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Debug Release Outputs
-      #   run: |
-      #     echo ${{ steps.release.outputs.release_created }}
-      #     echo ${{ toJson(steps.release.outputs) }}
-
-      # - name: Report ref
-      #   if: ${{ steps.release.outputs.release_created }}
-      #   run: echo ${{ steps.release.outputs.tag_name }}
-
-      # # Publish to Github's NPM registry
-      # - name: Publish to Github NPM registry
-      #   if: ${{ steps.release.outputs.release_created }} == 'true'
-      #   run: yarn publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The logic below handles the npm publication:
+          uses: actions/checkout@v4
+          # these if statements ensure that a publication only occurs when
+          # a new release is created:
+          if: ${{ steps.release.outputs.release_created }}
+          run: yarn publish --access public
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish documentation
         if: ${{ steps.release.outputs.release_created }} 
