@@ -3,3 +3,4 @@ dist
 dist-storybook
 .npmrc
 package-lock.json
+.yarn
