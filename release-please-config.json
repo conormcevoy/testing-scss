@@ -3,6 +3,7 @@
   "bootstrap-sha": "0f2d6c194db7e975a3ddcfcadbb9f780a6ff7c0d",
   "packages": {
     ".": {
+      "release-type": "node",
       "changelog-path": "CHANGELOG.md",
       "monorepo-tags": false,
       "pull-request-title-pattern": "chore(release): ${version}",
