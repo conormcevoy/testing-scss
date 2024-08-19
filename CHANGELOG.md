@@ -4,6 +4,13 @@
 
 - **config**: 125 somehting happened (#14)
 
+## [1.6.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.5.0...ul-ds-v1.6.0) (2024-08-19)
+
+
+### Features
+
+* **config:** 1234 added dist ([85fe770](https://github.com/conormcevoy/testing-scss/commit/85fe77048df2756c15e1473dbcea1a5a2e123850))
+
 ## [1.5.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.4.0...ul-ds-v1.5.0) (2024-08-19)
 
 
