@@ -43,8 +43,6 @@ jobs:
           token: ${{secrets.REPO_TOKEN}}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-          with:
-            release-type: 'node'
           # The logic below handles the npm publication:
           uses: actions/checkout@v4
           # these if statements ensure that a publication only occurs when
