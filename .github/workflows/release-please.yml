@@ -50,7 +50,7 @@ jobs:
           echo ${{ toJson(steps.release.outputs) }}
 
       - name: Report ref
-        if: ${{ steps.release.outputs.release_created }}
+        if: ${{ steps.release.outputs.release_created }} === 'true'
         run: echo ${{ steps.release.outputs.tag_name }}
 
       # Publish to Github's NPM registry
