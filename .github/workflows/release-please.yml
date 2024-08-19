@@ -50,7 +50,7 @@ jobs:
           if: ${{ steps.release.outputs.release_created }}
           run: yarn publish --access public
           env:
-            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish documentation
         if: ${{ steps.release.outputs.release_created }} 
