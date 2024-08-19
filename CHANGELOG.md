@@ -4,6 +4,13 @@
 
 - **config**: 125 somehting happened (#14)
 
+## [1.7.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.6.0...ul-ds-v1.7.0) (2024-08-19)
+
+
+### Features
+
+* **config:** fixing issue with package ([196edb1](https://github.com/conormcevoy/testing-scss/commit/196edb188abd6c627626e54efed06f8bf9cc2639))
+
 ## [1.6.0](https://github.com/conormcevoy/testing-scss/compare/ul-ds-v1.5.0...ul-ds-v1.6.0) (2024-08-19)
 
 
