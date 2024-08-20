@@ -20,7 +20,7 @@ jobs:
           always-auth: true
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build
         run: yarn build-dev
