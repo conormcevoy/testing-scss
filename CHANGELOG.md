@@ -4,6 +4,13 @@
 
 - **config**: 125 somehting happened (#14)
 
+## [1.9.0](https://github.com/conormcevoy/testing-scss/compare/testing-scss-v1.8.0...testing-scss-v1.9.0) (2024-08-20)
+
+
+### Features
+
+* **config:** 1234 more pipeline changes ([e937f02](https://github.com/conormcevoy/testing-scss/commit/e937f0225a75fe817eb7eac286d39f2dff386101))
+
 ## [1.8.0](https://github.com/conormcevoy/testing-scss/compare/testing-scss-v1.7.0...testing-scss-v1.8.0) (2024-08-20)
 
 
