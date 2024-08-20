@@ -3,10 +3,7 @@
   "version": "1.9.0",
   "description": "",
   "main": "index.css",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:conormcevoy/testing-scss.git"
-  },
+  "repository": "https://github.com/conormcevoy/testing-scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
