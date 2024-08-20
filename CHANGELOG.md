@@ -4,6 +4,13 @@
 
 - **config**: 125 somehting happened (#14)
 
+## [1.10.0](https://github.com/conormcevoy/testing-scss/compare/testing-scss-v1.9.0...testing-scss-v1.10.0) (2024-08-20)
+
+
+### Features
+
+* **config:** update repo name ([4fd851c](https://github.com/conormcevoy/testing-scss/commit/4fd851c4256d5a13fa503906fb4b9b85c9e40fff))
+
 ## [1.9.0](https://github.com/conormcevoy/testing-scss/compare/testing-scss-v1.8.0...testing-scss-v1.9.0) (2024-08-20)
 
 
